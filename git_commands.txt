@@ -1,0 +1,75 @@
+# authorship 
+
+git config --global user.name user_name
+git config --global user.email	user_email_id
+
+#  
+
+git init    				..to initialize git repo in local directory
+
+git add 				.. to add untrack files or files to add in staging state
+
+git status 				.. to check changed status of files which might be in staging, modified
+
+git diff				.. to see changed state of the files (added/deleted/modified)
+
+git commit				.. to commit/save existing changes with its description,commit msg
+
+git commit -m "commit msg"		.. to commit/save existing changes only with commit msg not with description
+
+git log					.. to check commit log history
+
+git show commit_hash_or_id    ...   shows specific changes we done in particular commit
+
+# Branches
+
+git branch      --- shows on which branch we are ! or list of branches 
+
+git branch new_branch_name		.. create new branch
+
+git checkout branch_name		.. to switch in another branch
+
+git checkout -b new_branch_name		.. to create and switch to new branch
+
+# unstage particular file 
+
+git rm --cached file_name  ---- unstage file from staging state.
+
+git restore --staged <file>..." unstage file from staging state.
+
+
+# git reset commands
+
+git reset file_name   : unstage file from staging state.
+
+git reset   :   unstage all files from staging state to unstaging state
+
+git reset --hard : discard all existing changes before commiting any changes
+
+
+# git push  
+
+git remote -v 				.. to view all remote repo url availble in local repo
+
+git remote add any_variable repo_url	.. to add remote repo on temp. basis.
+
+git push any_variable branch_name	.. to push existing changes to remote repo in specified branch_name  
+
+# git fetch / pull
+
+git fetch any_variable  :    only fetch/download metadata from git repo url , dont merge changes 
+git pull   :    fetch remote changes and merge them 
+
+---
+
+git fetch : command that tells your local git to retrieve the latest meta-data info from the remote repo you want to fetch from ! 
+            but that doesnt mean it will merge latest remote changes.
+
+git pull :  track remote changes, and if any then current local repo will upto date with new changes.
+
+
+# git clone  
+
+git clone repo_url   : clone remote url in your local system
+
+git clone repo_url -b branch_name  : clone remote url with specific branch in your local system
