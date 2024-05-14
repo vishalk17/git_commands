@@ -73,3 +73,59 @@ git pull :  track remote changes, and if any then current local repo will upto d
 git clone repo_url   : clone remote url in your local system
 
 git clone repo_url -b branch_name  : clone remote url with specific branch in your local system
+
+#  git merge / add changes / revert changes / git confict 
+
+git cherry-pick commit_id_hash  ... picking commit changes
+git revert commit_id_hash        ... reverting commit change
+
+---
+Q. 174 git conflict
+
+When Git is unable to automatically resolve differences in code between two commits because 
+there are conflicting changes to the same line of code, a merge conflict occurs
+---
+Q. 162  how we resolve the basic conflict in git ?
+
+1. Check which files changed and which has issue
+
+git status
+
+2.  Now futher check with all modified files
+
+git diff
+
+3. Now open the file which has conflict in vi editor
+
+4. Now determine which things you have to keep in the file and which have to discard
+
+5. Once confirmed
+
+6.  Edit, save and  then
+
+git add file_name
+
+git commit
+---
+Q. 180 command for to resolve the merge conflict
+
+>>
+
+I dont think there is any command to resolve conflict fully automatically, how will git know which changes have to keep and which have to discard.
+
+So better practice should be,
+
+- merged conflict occured...?
+
+- discuss with the developers
+
+- modified files accordingly. After final call from developers
+
+- add files using ' git add '
+
+- git commit  ( to commit changes )
+
+.....
+---
+git checkout master         -- switch to master branch 
+git merge feature_branch   ... merge feature branch changes in master branch
